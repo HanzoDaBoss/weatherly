@@ -9,15 +9,15 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("index", {weather: null, error: null});
 });
 
-app.post("/", function (req, res) {
+app.post("/", (req, res) => {
   let city = req.body.city;
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${apiKey}`;
   console.log(req.body.city);
-  request(url, function (err, response, body) {
+  request(url, (err, response, body) => {
     if (err) {
       res.render("index", {weather: null, error: "Error, please try again"});
     } else {
