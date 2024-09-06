@@ -1,18 +1,18 @@
 body {
-    width: 800px;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
-    background: url("../images/weather.jpg");
+    background-image: url("../images/weather.jpg");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 .container {
     width: 600px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     opacity: .7;
     background-color: darkgray;
     border-radius: 10px;
