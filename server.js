@@ -29,7 +29,6 @@ app.post("/", (req, res) => {
       } else {
         let weatherText = `It's ${weather.main.temp} degrees with ${weather.weather[0].main} in ${weather.name}!`;
         res.render("index", {weather: weatherText, error: null});
-        console.log("body:", body);
       }
     }
   });
